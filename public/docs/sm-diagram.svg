@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa3bd"/></marker>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ffb000"/></marker>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b07cff"/></marker>
+  </defs>
+  <rect width="980" height="560" rx="10" fill="#161a24"/>
+  <text x="20" y="30" fill="#e6e9f2" font-size="16" font-weight="700">How a KOF97 fighter runs: one state routine per frame, chosen by +0</text>
+  <text x="20" y="50" fill="#9aa3bd" font-size="12">Addresses are KOF97 (checked in FBNeo). KOF98: dispatcher $14854 · KOF2002: $2ECF0. Offsets are the same in all three.</text>
+
+  <!-- main loop -->
+  <rect x="20" y="70" width="270" height="118" rx="8" fill="#1f2433" stroke="#3d6ea8"/>
+  <text x="34" y="94" fill="#7fb0ff" font-size="13" font-weight="700">Main loop, every frame ($9C44)</text>
+  <text x="34" y="116" fill="#e6e9f2" font-size="12">wait VBlank · read joysticks ($9F68)</text>
+  <text x="34" y="136" fill="#e6e9f2" font-size="12">object list from $100100 ($9DE0):</text>
+  <text x="34" y="156" fill="#ffb000" font-size="12" font-family="Consolas, monospace">movea.l (a4),a0 / jsr (a0)</text>
+  <text x="34" y="176" fill="#9aa3bd" font-size="11">= run the routine stored at +0 of each object</text>
+
+  <!-- neutral -->
+  <rect x="340" y="70" width="290" height="140" rx="8" fill="#1f2433" stroke="#5a8f4e"/>
+  <text x="354" y="94" fill="#8fd17f" font-size="13" font-weight="700">Neutral state  +0 = $F464</text>
+  <text x="354" y="114" fill="#e6e9f2" font-size="12">ACT 000 (idle animation)</text>
+  <text x="354" y="134" fill="#e6e9f2" font-size="12">1. command handler: (+$194)+8 → jsr</text>
+  <text x="354" y="152" fill="#e6e9f2" font-size="12">2. normals, throws ($116D6, $11672…)</text>
+  <text x="354" y="170" fill="#e6e9f2" font-size="12">3. joystick: walk $FBC6, crouch $FD02,</text>
+  <text x="354" y="188" fill="#e6e9f2" font-size="12">    jump, back step… (each its own +0)</text>
+
+  <!-- handler -->
+  <rect x="680" y="70" width="280" height="140" rx="8" fill="#1f2433" stroke="#a0516e"/>
+  <text x="694" y="94" fill="#ff8fb4" font-size="13" font-weight="700">Command handler (per character)</text>
+  <text x="694" y="114" fill="#e6e9f2" font-size="12">table $19DAC + char×2 (Kyo $19E3C)</text>
+  <text x="694" y="134" fill="#e6e9f2" font-size="12">tests motion bits ($10DA48) + buttons</text>
+  <text x="694" y="154" fill="#ffb000" font-size="12" font-family="Consolas, monospace">move.l #$2FCF0,($198,a4)</text>
+  <text x="694" y="174" fill="#e6e9f2" font-size="12">returns ≠ 0 → bne $101D8</text>
+  <text x="694" y="194" fill="#9aa3bd" font-size="11">supers are tested first, then specials</text>
+
+  <!-- dispatcher -->
+  <rect x="680" y="250" width="280" height="110" rx="8" fill="#2a2238" stroke="#ffb000"/>
+  <text x="694" y="274" fill="#ffd27a" font-size="13" font-weight="700">Dispatcher $101D8</text>
+  <text x="694" y="296" fill="#ffb000" font-size="12" font-family="Consolas, monospace">move.l (a4),($1C6,a4)</text>
+  <text x="694" y="314" fill="#ffb000" font-size="12" font-family="Consolas, monospace">movea.l ($198,a4),a0</text>
+  <text x="694" y="332" fill="#ffb000" font-size="12" font-family="Consolas, monospace">jmp (a0)</text>
+  <text x="694" y="350" fill="#9aa3bd" font-size="11">old state saved in +$1C6, move starts now</text>
+
+  <!-- move routine -->
+  <rect x="340" y="250" width="290" height="190" rx="8" fill="#1f2433" stroke="#b07cff"/>
+  <text x="354" y="274" fill="#c9a6ff" font-size="13" font-weight="700">Move routine $2FCF0 (Oniyaki)</text>
+  <text x="354" y="294" fill="#e6e9f2" font-size="12">setup: damage +$EF, ACTs +$D2/$D4/$D6,</text>
+  <text x="354" y="312" fill="#e6e9f2" font-size="12">speed +$50/+$58, sound, button +$1A4</text>
+  <text x="354" y="334" fill="#e6e9f2" font-size="12">phase 1: ACT 81 → +0 = $2FDE4</text>
+  <text x="354" y="352" fill="#e6e9f2" font-size="12">    waits for +$7C bit 7 (anim end)</text>
+  <text x="354" y="372" fill="#e6e9f2" font-size="12">phase 2: ACT 83 → +0 = $2FE14/$2FE56</text>
+  <text x="354" y="390" fill="#e6e9f2" font-size="12">    spawns fire, falls until landing</text>
+  <text x="354" y="410" fill="#e6e9f2" font-size="12">phase 3: ACT 85 → +0 = $2FECC</text>
+  <text x="354" y="430" fill="#ffb000" font-size="12" font-family="Consolas, monospace">jmp $1EAD8  (end of move)</text>
+
+  <!-- hit freeze -->
+  <rect x="20" y="250" width="270" height="120" rx="8" fill="#1f2433" stroke="#3b8a87"/>
+  <text x="34" y="274" fill="#7fe0d9" font-size="13" font-weight="700">On contact: hit freeze</text>
+  <text x="34" y="294" fill="#e6e9f2" font-size="12">attacker +0 → $1633E/$163F4/$16402</text>
+  <text x="34" y="312" fill="#e6e9f2" font-size="12">defender +0 → $16664, then $18A3A</text>
+  <text x="34" y="330" fill="#e6e9f2" font-size="12">(hit reaction ACT $102…)</text>
+  <text x="34" y="350" fill="#9aa3bd" font-size="11">the attacker's state is put back afterwards</text>
+  <text x="34" y="364" fill="#9aa3bd" font-size="11">cancels are checked during the freeze ($1E5AA)</text>
+
+  <!-- injector -->
+  <rect x="20" y="410" width="270" height="130" rx="8" fill="#22261a" stroke="#ffb000" stroke-dasharray="5 4"/>
+  <text x="34" y="434" fill="#ffd27a" font-size="13" font-weight="700">Lua injector shortcuts</text>
+  <text x="34" y="456" fill="#e6e9f2" font-size="12">motion(P2,"236A") → joystick, like a player</text>
+  <text x="34" y="476" fill="#e6e9f2" font-size="12">move(P1,0x2FCF0) → writes +$198 and +0</text>
+  <text x="34" y="496" fill="#e6e9f2" font-size="12">     (skips handler and dispatcher;</text>
+  <text x="34" y="514" fill="#e6e9f2" font-size="12">      works from ANY state)</text>
+  <text x="34" y="532" fill="#9aa3bd" font-size="11">w32(obj, addr) alone = jump to any state</text>
+
+  <!-- arrows -->
+  <path d="M290 128 L338 128" stroke="#9aa3bd" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M630 128 L678 128" stroke="#9aa3bd" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="634" y="120" fill="#9aa3bd" font-size="10">jsr</text>
+  <path d="M820 210 L820 248" stroke="#ffb000" stroke-width="2" fill="none" marker-end="url(#o)"/>
+  <text x="826" y="234" fill="#ffb000" font-size="11">move found</text>
+  <path d="M680 305 L632 305" stroke="#ffb000" stroke-width="2" fill="none" marker-end="url(#o)"/>
+  <path d="M485 250 L485 212" stroke="#b07cff" stroke-width="2" fill="none" marker-end="url(#p)" stroke-dasharray="5 3"/>
+  <text x="492" y="236" fill="#c9a6ff" font-size="11">$1EAD8 → +0 = $F43E/$F464</text>
+  <path d="M340 345 L292 320" stroke="#3b8a87" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M292 340 L338 362" stroke="#3b8a87" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M290 470 C 520 520, 600 470, 600 442" stroke="#ffb000" stroke-width="2" fill="none" marker-end="url(#o)" stroke-dasharray="5 4"/>
+</svg>

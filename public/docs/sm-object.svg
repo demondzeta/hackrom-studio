@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="470" viewBox="0 0 980 470" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <rect width="980" height="470" rx="10" fill="#161a24"/>
+  <text x="20" y="30" fill="#e6e9f2" font-size="16" font-weight="700">The player object: P1 = $108100, P2 = $108300 (KOF97 / KOF98 / KOF2002)</text>
+  <text x="20" y="50" fill="#9aa3bd" font-size="12">Address = object + offset. Orange = what you write to control a fighter; blue = what you read to know what it is doing.</text>
+  <g font-size="12">
+    <!-- column 1 -->
+    <rect x="20" y="66" width="460" height="386" rx="8" fill="#1f2433"/>
+    <g font-family="Consolas, monospace">
+      <text x="34" y="92" fill="#ffb000">+$000  long</text>
+      <text x="34" y="116" fill="#7fb0ff">+$018  word</text>
+      <text x="34" y="140" fill="#7fb0ff">+$026  word</text>
+      <text x="34" y="164" fill="#7fb0ff">+$028  long</text>
+      <text x="34" y="188" fill="#7fb0ff">+$031  byte</text>
+      <text x="34" y="212" fill="#ffb000">+$050  long</text>
+      <text x="34" y="236" fill="#ffb000">+$058  long</text>
+      <text x="34" y="260" fill="#7fb0ff">+$070  word</text>
+      <text x="34" y="284" fill="#7fb0ff">+$072  word</text>
+      <text x="34" y="308" fill="#7fb0ff">+$07C  byte</text>
+      <text x="34" y="332" fill="#7fb0ff">+$080  word</text>
+      <text x="34" y="356" fill="#7fb0ff">+$090  5×5 b</text>
+      <text x="34" y="380" fill="#ffb000">+$0D2  words</text>
+      <text x="34" y="404" fill="#7fb0ff">+$0E0  byte</text>
+      <text x="34" y="428" fill="#ffb000">+$0EF  byte</text>
+    </g>
+    <text x="170" y="92" fill="#e6e9f2">STATE: routine run every frame</text>
+    <text x="170" y="116" fill="#e6e9f2">x position in the stage</text>
+    <text x="170" y="140" fill="#e6e9f2">y (height, ground = 216 in KOF97)</text>
+    <text x="170" y="164" fill="#e6e9f2">graph entry of the frame on screen</text>
+    <text x="170" y="188" fill="#e6e9f2">bit 0 = facing (sprite flip)</text>
+    <text x="170" y="212" fill="#e6e9f2">x speed (16.16, signed)</text>
+    <text x="170" y="236" fill="#e6e9f2">y speed  (+$5C gravity)</text>
+    <text x="170" y="260" fill="#e6e9f2">character id (Kyo 00, Iori 1B)</text>
+    <text x="170" y="284" fill="#e6e9f2">ACT (animation) playing</text>
+    <text x="170" y="308" fill="#e6e9f2">bit 7 = animation ended, 0-3 live boxes</text>
+    <text x="170" y="332" fill="#e6e9f2">frame number inside the ACT</text>
+    <text x="170" y="356" fill="#e6e9f2">live hit/hurt boxes (id, x, y, w, h)</text>
+    <text x="170" y="380" fill="#e6e9f2">ACT numbers a move routine plays</text>
+    <text x="170" y="404" fill="#e6e9f2">bit 1 = in the air</text>
+    <text x="170" y="428" fill="#e6e9f2">damage of the current attack</text>
+    <!-- column 2 -->
+    <rect x="500" y="66" width="460" height="386" rx="8" fill="#1f2433"/>
+    <g font-family="Consolas, monospace">
+      <text x="514" y="92" fill="#ffb000">+$139  byte</text>
+      <text x="514" y="116" fill="#7fb0ff">+$194  long</text>
+      <text x="514" y="140" fill="#ffb000">+$198  long</text>
+      <text x="514" y="164" fill="#7fb0ff">+$1A4  byte</text>
+      <text x="514" y="188" fill="#7fb0ff">+$1C6  long</text>
+      <text x="514" y="212" fill="#7fb0ff">+$1D6  byte</text>
+      <text x="514" y="236" fill="#ffb000">+$1E3  byte</text>
+      <text x="514" y="260" fill="#ffb000">+$0E6  byte</text>
+    </g>
+    <text x="650" y="92" fill="#e6e9f2">health ($67 full in KOF97/98)</text>
+    <text x="650" y="116" fill="#e6e9f2">character block (+8 = cmd handler)</text>
+    <text x="650" y="140" fill="#e6e9f2">MOVE ROUTINE (complete move)</text>
+    <text x="650" y="164" fill="#e6e9f2">button that started the move</text>
+    <text x="650" y="188" fill="#e6e9f2">state before the move (dispatcher)</text>
+    <text x="650" y="212" fill="#e6e9f2">alternate (EX/MAX) mode flag</text>
+    <text x="650" y="236" fill="#e6e9f2">power stocks</text>
+    <text x="650" y="260" fill="#e6e9f2">bit 0 on the ATTACKER = no hit reaction</text>
+    <text x="514" y="300" fill="#ffd27a" font-weight="700">Global RAM</text>
+    <g font-family="Consolas, monospace">
+      <text x="514" y="324" fill="#7fb0ff">$10FD96</text>
+      <text x="514" y="348" fill="#7fb0ff">$10FD9C</text>
+      <text x="514" y="372" fill="#7fb0ff">$10DA48</text>
+      <text x="514" y="396" fill="#ffb000">$10A83A</text>
+      <text x="514" y="420" fill="#7fb0ff">$100100</text>
+    </g>
+    <text x="650" y="324" fill="#e6e9f2">P1 joystick (BIOS): 0 up 1 down 2 left 3 right 4-7 ABCD</text>
+    <text x="650" y="348" fill="#e6e9f2">P2 joystick (BIOS)</text>
+    <text x="650" y="372" fill="#e6e9f2">P1 recognised motions (bits)</text>
+    <text x="650" y="396" fill="#e6e9f2">round timer (KOF97/98)</text>
+    <text x="650" y="420" fill="#e6e9f2">first object of the object list</text>
+  </g>
+</svg>

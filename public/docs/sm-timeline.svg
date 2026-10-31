@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="998" height="300" viewBox="0 0 998 300">
+<rect width="998" height="300" rx="10" fill="#161a24"/>
+<text x="12" y="22" fill="#e6e9f2" font-size="14" font-weight="600" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">Frame by frame: → ↓ ↘+C becomes Kyo's Oniyaki (KOF97, recorded in FBNeo)</text>
+<text x="12" y="58" fill="#9aa3bd" font-size="12" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">joystick (BIOS)</text>
+<rect x="150" y="40" width="53" height="26" rx="3" fill="#232838"/>
+<text x="154" y="57" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">—</text>
+<rect x="204" y="40" width="35" height="26" rx="3" fill="#3d6ea8"/>
+<text x="208" y="57" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">6</text>
+<rect x="240" y="40" width="35" height="26" rx="3" fill="#5a8f4e"/>
+<text x="244" y="57" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">2</text>
+<rect x="276" y="40" width="35" height="26" rx="3" fill="#8a6d3b"/>
+<text x="280" y="57" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">3+C</text>
+<rect x="312" y="40" width="665" height="26" rx="3" fill="#232838"/>
+<text x="316" y="57" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">—</text>
+<text x="12" y="96" fill="#9aa3bd" font-size="12" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">P1 +0 (state)</text>
+<rect x="150" y="78" width="62" height="26" rx="3" fill="#a0516e"/>
+<text x="154" y="95" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">standing</text>
+<rect x="213" y="78" width="26" height="26" rx="3" fill="#6c5aa8"/>
+<text x="217" y="95" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">walk</text>
+<rect x="240" y="78" width="8" height="26" rx="3" fill="#a0516e"/>
+<rect x="249" y="78" width="35" height="26" rx="3" fill="#3b8a87"/>
+<rect x="285" y="78" width="17" height="26" rx="3" fill="#a8743d"/>
+<rect x="303" y="78" width="44" height="26" rx="3" fill="#7f8c99"/>
+<rect x="348" y="78" width="8" height="26" rx="3" fill="#3d6ea8"/>
+<rect x="357" y="78" width="17" height="26" rx="3" fill="#5a8f4e"/>
+<rect x="375" y="78" width="80" height="26" rx="3" fill="#8a6d3b"/>
+<text x="379" y="95" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">freeze</text>
+<rect x="456" y="78" width="26" height="26" rx="3" fill="#7f8c99"/>
+<rect x="483" y="78" width="170" height="26" rx="3" fill="#a0516e"/>
+<text x="487" y="95" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">Oniyaki 2</text>
+<rect x="654" y="78" width="62" height="26" rx="3" fill="#6c5aa8"/>
+<rect x="717" y="78" width="116" height="26" rx="3" fill="#3b8a87"/>
+<text x="721" y="95" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">falling</text>
+<rect x="834" y="78" width="116" height="26" rx="3" fill="#a8743d"/>
+<text x="838" y="95" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">landing</text>
+<rect x="951" y="78" width="26" height="26" rx="3" fill="#a0516e"/>
+<text x="12" y="134" fill="#9aa3bd" font-size="12" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">P1 +$198 (routine)</text>
+<rect x="150" y="116" width="152" height="26" rx="3" fill="#232838"/>
+<text x="154" y="133" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">0</text>
+<rect x="303" y="116" width="674" height="26" rx="3" fill="#7f8c99"/>
+<text x="307" y="133" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">$02FCF0</text>
+<text x="12" y="172" fill="#9aa3bd" font-size="12" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">P1 +$1C6 (saved)</text>
+<rect x="150" y="154" width="152" height="26" rx="3" fill="#232838"/>
+<text x="154" y="171" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">0</text>
+<rect x="303" y="154" width="674" height="26" rx="3" fill="#a8743d"/>
+<text x="307" y="171" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">$00FDB4</text>
+<text x="12" y="210" fill="#9aa3bd" font-size="12" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">P1 ACT (+$72)</text>
+<rect x="150" y="192" width="62" height="26" rx="3" fill="#3d6ea8"/>
+<text x="154" y="209" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">ACT 000</text>
+<rect x="213" y="192" width="26" height="26" rx="3" fill="#5a8f4e"/>
+<rect x="240" y="192" width="8" height="26" rx="3" fill="#3d6ea8"/>
+<rect x="249" y="192" width="35" height="26" rx="3" fill="#8a6d3b"/>
+<rect x="285" y="192" width="17" height="26" rx="3" fill="#a0516e"/>
+<rect x="303" y="192" width="179" height="26" rx="3" fill="#6c5aa8"/>
+<text x="307" y="209" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">ACT 081</text>
+<rect x="483" y="192" width="350" height="26" rx="3" fill="#3b8a87"/>
+<text x="487" y="209" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">ACT 083</text>
+<rect x="834" y="192" width="116" height="26" rx="3" fill="#a8743d"/>
+<text x="838" y="209" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">ACT 085</text>
+<rect x="951" y="192" width="26" height="26" rx="3" fill="#3d6ea8"/>
+<text x="12" y="248" fill="#9aa3bd" font-size="12" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">P2 +0 (state)</text>
+<rect x="150" y="230" width="197" height="26" rx="3" fill="#a0516e"/>
+<text x="154" y="247" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">standing</text>
+<rect x="348" y="230" width="8" height="26" rx="3" fill="#3d6ea8"/>
+<rect x="357" y="230" width="8" height="26" rx="3" fill="#7f8c99"/>
+<rect x="366" y="230" width="98" height="26" rx="3" fill="#3d6ea8"/>
+<text x="370" y="247" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">hit reaction</text>
+<rect x="465" y="230" width="8" height="26" rx="3" fill="#5a8f4e"/>
+<rect x="474" y="230" width="161" height="26" rx="3" fill="#8a6d3b"/>
+<text x="478" y="247" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">pushback</text>
+<rect x="636" y="230" width="341" height="26" rx="3" fill="#a0516e"/>
+<text x="640" y="247" fill="#ffffff" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">standing</text>
+<line x1="150" y1="34" x2="150" y2="270" stroke="#2e3550" stroke-width="1"/><text x="152" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f515</text>
+<line x1="240" y1="34" x2="240" y2="270" stroke="#2e3550" stroke-width="1"/><text x="242" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f525</text>
+<line x1="330" y1="34" x2="330" y2="270" stroke="#2e3550" stroke-width="1"/><text x="332" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f535</text>
+<line x1="420" y1="34" x2="420" y2="270" stroke="#2e3550" stroke-width="1"/><text x="422" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f545</text>
+<line x1="510" y1="34" x2="510" y2="270" stroke="#2e3550" stroke-width="1"/><text x="512" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f555</text>
+<line x1="600" y1="34" x2="600" y2="270" stroke="#2e3550" stroke-width="1"/><text x="602" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f565</text>
+<line x1="690" y1="34" x2="690" y2="270" stroke="#2e3550" stroke-width="1"/><text x="692" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f575</text>
+<line x1="780" y1="34" x2="780" y2="270" stroke="#2e3550" stroke-width="1"/><text x="782" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f585</text>
+<line x1="870" y1="34" x2="870" y2="270" stroke="#2e3550" stroke-width="1"/><text x="872" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f595</text>
+<line x1="960" y1="34" x2="960" y2="270" stroke="#2e3550" stroke-width="1"/><text x="962" y="286" fill="#6b7591" font-size="10" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">f605</text>
+<line x1="276" y1="34" x2="276" y2="270" stroke="#ffb000" stroke-width="2" stroke-dasharray="4 3"/><text x="280" y="268" fill="#ffb000" font-size="11" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">dispatcher $101D8 runs</text>
+</svg>

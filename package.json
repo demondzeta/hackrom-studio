@@ -1,0 +1,77 @@
+{
+  "name": "hackrom-studio",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "esbuild scripts/selftest.ts --bundle --platform=node --outfile=node_modules/.selftest.cjs --log-level=warning && node node_modules/.selftest.cjs",
+    "desktop": "vite build && electron .",
+    "dist": "npm run build && electron-builder --win nsis --publish never"
+  },
+  "dependencies": {
+    "electron-updater": "6.8.10",
+    "fflate": "0.8.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "electron": "44.7.2",
+    "electron-builder": "26.17.0",
+    "typescript": "5.6.3",
+    "vite": "6.0.7"
+  },
+  "productName": "HackROM Studio",
+  "description": "Neo Geo ROM editor",
+  "author": "HackROM Studio",
+  "main": "electron/main.cjs",
+  "hackrom": {
+    "updateUrl": "https://github.com/demondzeta/hackrom-studio/releases/latest/download"
+  },
+  "build": {
+    "appId": "com.hackromstudio.app",
+    "productName": "HackROM Studio",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "tools/live",
+        "to": "live",
+        "filter": [
+          "*.lua"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "HackROM-Studio-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "HackROM Studio"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://github.com/demondzeta/hackrom-studio/releases/latest/download"
+      }
+    ]
+  }
+}
